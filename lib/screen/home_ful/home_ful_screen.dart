@@ -50,11 +50,26 @@ class _HomeFulScreenState extends State<HomeFulScreen> {
             ),
           ),
           TextButton.icon(
+            style: ElevatedButton.styleFrom(
+              primary: Colors.white,
+              onPrimary: Colors.blue,
+              elevation: 30,
+            ),
             onPressed: () {
               addText(fontName);
             },
-            icon: const Icon(Icons.icecream),
-            label: const Text('反映する'),
+            icon: const Icon(
+              Icons.add_a_photo_rounded,
+              size: 30,
+            ),
+            label: const Text(
+              '反映する',
+              style: TextStyle(
+                color: Colors.blue,
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
           ),
           const Spacer(),
           SizedBox(
