@@ -202,17 +202,16 @@ class _HomeFulScreenState extends State<HomeFulScreen> {
     return showDialog(
       context: context,
       builder: (_) => CupertinoAlertDialog(
-        title: const Text("確認"),
-        content: const Text('保存'),
+        title: const Text("タイトルに戻りますか？"),
         actions: [
           CupertinoDialogAction(
-              child: const Text('Cancel'),
+              child: const Text('いいえ'),
               isDestructiveAction: true,
               onPressed: () {
                 Navigator.of(context).pop();
               }),
           CupertinoDialogAction(
-            child: const Text('OK'),
+            child: const Text('はい'),
             onPressed: () {
               //Navigator.of(context).pop();
               Navigator.of(context).popUntil((route) => route.isFirst);
