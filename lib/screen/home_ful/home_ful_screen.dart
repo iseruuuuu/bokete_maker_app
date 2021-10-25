@@ -52,7 +52,8 @@ class _HomeFulScreenState extends State<HomeFulScreen> {
                 ),
               ),
               GestureDetector(
-                child: Text('+',
+                child: Text(
+                  '+',
                   style: TextStyle(
                     fontSize: 20,
                     color: Colors.red,
@@ -174,7 +175,7 @@ class _HomeFulScreenState extends State<HomeFulScreen> {
     option.addOption(textOption);
     final Uint8List u = await getAssetImage();
     final Uint8List? result =
-    await ImageEditor.editImage(image: u, imageEditorOption: option);
+        await ImageEditor.editImage(image: u, imageEditorOption: option);
     if (result == null) {
       return;
     }
