@@ -30,6 +30,9 @@ dependencies:
   top_snackbar_flutter: ^1.0.1
   url_launcher: ^6.0.12
 
+  #app_review
+  in_app_review: ^2.0.3
+
 flutter_gen:
   integrations:
     flutter_svg: true
