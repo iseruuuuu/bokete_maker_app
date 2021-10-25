@@ -34,46 +34,27 @@ class _HomeFulScreenState extends State<HomeFulScreen> {
       body: Column(
         children: [
           target != null ? Image(image: target!) : Image.asset(assets),
-
-          Row(
-            children: [
-              SizedBox(
-                width: 250,
-                height: 100,
-                child: TextField(
-                  maxLines: 1,
-                  maxLength: 10,
-                  textAlign: TextAlign.center,
-                  controller: _controller,
-                  keyboardType: TextInputType.multiline,
-                  decoration: const InputDecoration(
-                    border: OutlineInputBorder(),
-                  ),
-                ),
-              ),
-              GestureDetector(
-                child: Text(
-                  '+',
-                  style: TextStyle(
-                    fontSize: 20,
-                    color: Colors.red,
-                  ),
-                ),
-              )
-            ],
-          ),
-          //TODO ボタンのデザインを変えたい。
-          GestureDetector(
-            onTap: () {
-              addText(fontName);
-            },
-            child: const Text(
-              '反映する',
-              style: TextStyle(
-                fontSize: 20,
-                color: Colors.blue,
+          const SizedBox(height: 20),
+          SizedBox(
+            width: 250,
+            height: 100,
+            child: TextField(
+              maxLines: 1,
+              maxLength: 10,
+              textAlign: TextAlign.center,
+              controller: _controller,
+              keyboardType: TextInputType.multiline,
+              decoration: const InputDecoration(
+                border: OutlineInputBorder(),
               ),
             ),
+          ),
+          TextButton.icon(
+            onPressed: () {
+              addText(fontName);
+            },
+            icon: const Icon(Icons.icecream),
+            label: const Text('反映する'),
           ),
           const Spacer(),
           SizedBox(
