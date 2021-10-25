@@ -1,0 +1,49 @@
+name: bokete_maker_app
+description: A new Flutter project.
+
+
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.15.0-233.0.dev <3.0.0"
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # icon
+  cupertino_icons: ^1.0.2
+
+  # architecture
+  get: ^4.3.8
+
+  # image
+  flutter_svg: ^0.23.0+1
+  image_editor: ^1.0.1
+  image_editor_pro: ^1.1.8
+  image_gallery_saver: ^1.7.1
+
+  # sort import
+  import_sorter: ^4.6.0
+
+  #snackbar
+  top_snackbar_flutter: ^1.0.1
+  url_launcher: ^6.0.12
+
+flutter_gen:
+  integrations:
+    flutter_svg: true
+    flare_flutter: true
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^1.0.0
+  build_runner: ^2.1.4
+  flutter_gen_runner:
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/
+
