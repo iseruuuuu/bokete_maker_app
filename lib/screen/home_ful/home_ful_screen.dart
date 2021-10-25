@@ -77,10 +77,10 @@ class _HomeFulScreenState extends State<HomeFulScreen> {
             height: 50,
             child: ElevatedButton(
               onPressed: () {
-                onImageStore();
                 //TODO もし、画像が変化していなかったら、画像を保存しないようにする。
                 //TODO ボタンの位置を変更したい。
-                onTapStore();
+                onImageStore();
+                storeDialog();
               },
               style: ElevatedButton.styleFrom(
                 primary: Colors.blue,
@@ -203,6 +203,31 @@ class _HomeFulScreenState extends State<HomeFulScreen> {
       context: context,
       builder: (_) => CupertinoAlertDialog(
         title: const Text("タイトルに戻りますか？"),
+        actions: [
+          CupertinoDialogAction(
+              child: const Text('いいえ'),
+              isDestructiveAction: true,
+              onPressed: () {
+                Navigator.of(context).pop();
+              }),
+          CupertinoDialogAction(
+            child: const Text('はい'),
+            onPressed: () {
+              //Navigator.of(context).pop();
+              Navigator.of(context).popUntil((route) => route.isFirst);
+            },
+          )
+        ],
+      ),
+    );
+  }
+
+  Future storeDialog() {
+    return showDialog(
+      context: context,
+      builder: (_) => CupertinoAlertDialog(
+        title: const Text("保存が完了しました"),
+        content: const Text('このままタイトルに戻りますか'),
         actions: [
           CupertinoDialogAction(
               child: const Text('いいえ'),
