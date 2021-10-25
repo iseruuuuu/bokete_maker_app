@@ -1,4 +1,4 @@
-import 'package:bokete_maker_app/title/title_screen.dart';
+import 'package:bokete_maker_app/screen/title/title_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
