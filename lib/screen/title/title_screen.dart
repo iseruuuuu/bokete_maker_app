@@ -36,26 +36,26 @@ class TitleScreen extends StatelessWidget {
                 height: MediaQuery.of(context).size.height / 4,
               ),
             ),
-            ElevatedButton(
-              onPressed: controller.onTapDialog,
-              style: ElevatedButton.styleFrom(
-                primary: Colors.transparent,
-                elevation: 10,
-              ),
-              child: Assets.images.title02.image(
-                height: MediaQuery.of(context).size.height / 4,
-              ),
-            ),
-            ElevatedButton(
-              onPressed: controller.onTapDialog,
-              style: ElevatedButton.styleFrom(
-                primary: Colors.transparent,
-                elevation: 10,
-              ),
-              child: Assets.images.title03.image(
-                height: MediaQuery.of(context).size.height / 4,
-              ),
-            ),
+            // ElevatedButton(
+            //   onPressed: controller.onTapDialog,
+            //   style: ElevatedButton.styleFrom(
+            //     primary: Colors.transparent,
+            //     elevation: 10,
+            //   ),
+            //   child: Assets.images.title02.image(
+            //     height: MediaQuery.of(context).size.height / 4,
+            //   ),
+            // ),
+            // ElevatedButton(
+            //   onPressed: controller.onTapDialog,
+            //   style: ElevatedButton.styleFrom(
+            //     primary: Colors.transparent,
+            //     elevation: 10,
+            //   ),
+            //   child: Assets.images.title03.image(
+            //     height: MediaQuery.of(context).size.height / 4,
+            //   ),
+            // ),
           ],
         ),
       ),

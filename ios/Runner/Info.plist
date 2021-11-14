@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
-	<string>Bokete Maker App</string>
+	<string>大喜利メーカー</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -17,15 +17,35 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>$(FLUTTER_BUILD_NAME)</string>
+	<string>$(MARKETING_VERSION)</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
 	<string>$(FLUTTER_BUILD_NUMBER)</string>
-	<key>NSPhotoLibraryAddUsageDescription</key>
-	<string>カメラロールに保存します</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSAppleMusicUsageDescription</key>
+	<string>カメラロールに保存します</string>
+	<key>NSBluetoothAlwaysUsageDescription</key>
+	<string>カメラロールに保存します</string>
+	<key>NSBluetoothPeripheralUsageDescription</key>
+	<string>カメラロールに保存します</string>
+	<key>NSCalendarsUsageDescription</key>
+	<string>カメラロールに保存します</string>
+	<key>NSContactsUsageDescription</key>
+	<string>カメラロールに保存します</string>
+	<key>NSLocalNetworkUsageDescription</key>
+	<string>カメラロールに保存します</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>カメラロールに保存します</string>
+	<key>NSMotionUsageDescription</key>
+	<string>カメラロールに保存します</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>カメラロールに保存します</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>カメラロールに保存します</string>
+	<key>NSSpeechRecognitionUsageDescription</key>
+	<string>カメラロールに保存します</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
@@ -43,5 +63,7 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+	<key>kTCCServiceMediaLibrary</key>
+	<string>カメラロールに保存します</string>
 </dict>
 </plist>
