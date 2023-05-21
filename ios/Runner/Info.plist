@@ -25,7 +25,7 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSAppleMusicUsageDescription</key>
-	<string>カメラロールに保存します</string>
+	<string>大喜利の画像を保存するために、保存する許可が必要となります。</string>
 	<key>NSBluetoothAlwaysUsageDescription</key>
 	<string>カメラロールに保存します</string>
 	<key>NSBluetoothPeripheralUsageDescription</key>
@@ -41,9 +41,9 @@
 	<key>NSMotionUsageDescription</key>
 	<string>カメラロールに保存します</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
-	<string>カメラロールに保存します</string>
+	<string>大喜利の画像を保存するために、保存する許可が必要となります。</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>カメラロールに保存します</string>
+	<string>大喜利の画像を保存するために、保存する許可が必要となります。</string>
 	<key>NSSpeechRecognitionUsageDescription</key>
 	<string>カメラロールに保存します</string>
 	<key>UILaunchStoryboardName</key>
@@ -65,5 +65,9 @@
 	<false/>
 	<key>kTCCServiceMediaLibrary</key>
 	<string>カメラロールに保存します</string>
+	<key>CADisableMinimumFrameDurationOnPhone</key>
+	<true/>
+	<key>UIApplicationSupportsIndirectInputEvents</key>
+	<true/>
 </dict>
 </plist>

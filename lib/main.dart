@@ -1,6 +1,12 @@
-import 'package:bokete_maker_app/screen/title/title_screen.dart';
+// Flutter imports:
 import 'package:flutter/material.dart';
+
+// Package imports:
+import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:get/get.dart';
+
+// Project imports:
+import 'screen/title/image_create_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,9 +17,10 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const GetMaterialApp(
+    return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      home: TitleScreen(),
+      home: const ImageCreateScreen(),
+      builder: EasyLoading.init(),
     );
   }
 }
