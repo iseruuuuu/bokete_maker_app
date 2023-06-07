@@ -13,9 +13,11 @@ class ImageEditorScreen extends StatelessWidget {
   const ImageEditorScreen({
     Key? key,
     required this.title,
+    required this.subTitle,
   }) : super(key: key);
 
   final String title;
+  final String subTitle;
 
   @override
   Widget build(BuildContext context) {
@@ -67,16 +69,36 @@ class ImageEditorScreen extends StatelessWidget {
                     ),
                   ),
                 ),
+                SizedBox(
+                  width: MediaQuery.of(context).size.width,
+                  height: MediaQuery.of(context).size.height / 3,
+                  child: Column(
+                    children: [
+                      const Spacer(flex: 10),
+                      Text(
+                        subTitle,
+                        style: const TextStyle(
+                          fontWeight: FontWeight.bold,
+                          color: Colors.black,
+                          fontSize: 15,
+                        ),
+                      ),
+                      const Spacer(),
+                    ],
+                  ),
+                ),
               ],
             ),
           ),
           const SizedBox(height: 10),
-          Text(
-            'FontSize：${controller.fontSize.value}　Padding：${controller.padding.value}',
-            style: const TextStyle(
-              fontSize: 20,
-              fontWeight: FontWeight.bold,
-              color: Colors.black,
+          Obx(
+            () => Text(
+              'FontSize：${controller.fontSize.value}　Padding：${controller.padding.value}',
+              style: const TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+                color: Colors.black,
+              ),
             ),
           ),
           const Spacer(),

@@ -36,7 +36,45 @@ class ImageCreateScreen extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 10),
               child: TextField(
-                onChanged: controller.onChanged,
+                onChanged: controller.onTitleChanged,
+                maxLines: 2,
+                maxLength: 40,
+                inputFormatters: [
+                  TextInputFormatter.withFunction(
+                      (TextEditingValue oldValue, TextEditingValue newValue) {
+                    int numLines = '\n'.allMatches(newValue.text).length;
+                    if (numLines > 1) {
+                      return oldValue;
+                    }
+                    return newValue;
+                  }),
+                ],
+                minLines: 1,
+                style: const TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.w500,
+                  color: Colors.black,
+                ),
+                decoration: InputDecoration(
+                  enabledBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(10),
+                    borderSide: const BorderSide(
+                      color: Colors.black,
+                    ),
+                  ),
+                  focusedBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(10),
+                    borderSide: const BorderSide(
+                      color: Colors.blue,
+                    ),
+                  ),
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 10),
+              child: TextField(
+                onChanged: controller.onSubTitleChanged,
                 maxLines: 2,
                 maxLength: 20,
                 inputFormatters: [

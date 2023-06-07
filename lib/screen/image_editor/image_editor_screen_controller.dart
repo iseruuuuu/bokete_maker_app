@@ -19,7 +19,7 @@ class ImageEditorScreenController extends GetxController {
   ScreenshotController screenshotController = ScreenshotController();
 
   void incrementFontSize() {
-    if (fontSize < 50 && padding < 80) {
+    if (fontSize < 33 && padding < 80) {
       fontSize.value++;
     }
   }
@@ -29,7 +29,7 @@ class ImageEditorScreenController extends GetxController {
   }
 
   void incrementPadding() {
-    if (fontSize < 50 && padding < 80) {
+    if (fontSize < 33 && padding < 80) {
       padding.value++;
     }
   }

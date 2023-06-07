@@ -10,18 +10,28 @@ import '../image_editor/image_editor_screen.dart';
 
 class ImageCreateScreenController extends GetxController {
   String text = '';
+  String subTitle = '';
 
-  void onChanged(String value) {
+  void onTitleChanged(String value) {
     text = value;
   }
 
+  void onSubTitleChanged(String value) {
+    subTitle = value;
+  }
+
   void onSubmit() async {
-    if (text.isNotEmpty) {
+    if (text.isNotEmpty || subTitle.isNotEmpty) {
       EasyLoading.show(status: 'loading...');
       await Future.delayed(const Duration(seconds: 3));
       EasyLoading.dismiss();
       await Future.delayed(const Duration(seconds: 1));
-      Get.to(() => ImageEditorScreen(title: text));
+      Get.to(
+        () => ImageEditorScreen(
+          title: text,
+          subTitle: subTitle,
+        ),
+      );
     } else {
       Get.snackbar(
         '生成失敗',
