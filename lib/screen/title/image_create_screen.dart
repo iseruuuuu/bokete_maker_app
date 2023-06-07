@@ -31,10 +31,34 @@ class ImageCreateScreen extends StatelessWidget {
       ),
       body: Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
+            Container(
+              width: MediaQuery.of(context).size.width,
+              height: 50,
+              child: const Center(
+                child: Text(
+                  '作成例',
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.black,
+                  ),
+                ),
+              ),
+            ),
+            //TODO 画像を追加する。
+            Image.asset('assets/example/example.png'),
+            const Spacer(),
+            const Text(
+              'お題',
+              style: TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+                color: Colors.black,
+              ),
+            ),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 10),
+              padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
               child: TextField(
                 onChanged: controller.onTitleChanged,
                 maxLines: 2,
@@ -71,8 +95,19 @@ class ImageCreateScreen extends StatelessWidget {
                 ),
               ),
             ),
+            const Text(
+              'サブタイトル',
+              style: TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+                color: Colors.black,
+              ),
+            ),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 10),
+              padding: const EdgeInsets.symmetric(
+                horizontal: 10,
+                vertical: 20,
+              ),
               child: TextField(
                 onChanged: controller.onSubTitleChanged,
                 maxLines: 2,
@@ -115,6 +150,7 @@ class ImageCreateScreen extends StatelessWidget {
               buttonColor: Colors.yellow,
               titleColor: Colors.black,
             ),
+            const Spacer(),
           ],
         ),
       ),
