@@ -1,4 +1,5 @@
 // Flutter imports:
+import 'package:bokete_maker_app/admob/admob.dart';
 import 'package:flutter/material.dart';
 
 // Package imports:
@@ -39,6 +40,11 @@ class ImageEditorScreen extends StatelessWidget {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
+          Container(
+            color: Colors.yellow,
+            width: MediaQuery.of(context).size.width,
+            child: AdmobBanner().myBannerAd,
+          ),
           Screenshot(
             controller: controller.screenshotController,
             child: Stack(

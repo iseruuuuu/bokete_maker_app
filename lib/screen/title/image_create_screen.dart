@@ -6,6 +6,7 @@ import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 
 // Project imports:
+import '../../admob/admob.dart';
 import '../../component/app_button.dart';
 import 'image_create_screen_controller.dart';
 
@@ -37,21 +38,12 @@ class ImageCreateScreen extends StatelessWidget {
           child: Center(
             child: Column(
               children: [
-                SizedBox(
+                Container(
+                  color: Colors.yellow,
                   width: MediaQuery.of(context).size.width,
-                  height: 50,
-                  child: const Center(
-                    child: Text(
-                      '作成例',
-                      style: TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.black,
-                      ),
-                    ),
-                  ),
+                  child: AdmobBanner().myBannerAd,
                 ),
-                //TODO 画像を追加する。
+                AdmobBanner().myBannerAd,
                 Image.asset('assets/example/example.png'),
                 const Text(
                   'お題',
@@ -62,8 +54,7 @@ class ImageCreateScreen extends StatelessWidget {
                   ),
                 ),
                 Padding(
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+                  padding: const EdgeInsets.all(15),
                   child: TextField(
                     onChanged: controller.onTitleChanged,
                     maxLines: 2,
@@ -110,10 +101,7 @@ class ImageCreateScreen extends StatelessWidget {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 10,
-                    vertical: 20,
-                  ),
+                  padding: const EdgeInsets.all(15),
                   child: TextField(
                     onChanged: controller.onSubTitleChanged,
                     maxLines: 2,
